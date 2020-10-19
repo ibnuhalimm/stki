@@ -64,6 +64,31 @@ LOCK TABLES `stopword` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `tfidf`
+--
+
+DROP TABLE IF EXISTS `tfidf`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tfidf` (
+  `id` varchar(5) NOT NULL,
+  `no` varchar(5) NOT NULL,
+  `kata` varchar(50) NOT NULL,
+  `freq` varchar(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tfidf`
+--
+
+LOCK TABLES `tfidf` WRITE;
+/*!40000 ALTER TABLE `tfidf` DISABLE KEYS */;
+INSERT INTO `tfidf` VALUES ('1','1','this','1'),('1','2','is','1'),('1','3','a','2'),('1','4','sample','1'),('2','1','this','1'),('2','2','is','1'),('2','3','another','2'),('2','4','example','3');
+/*!40000 ALTER TABLE `tfidf` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `token`
 --
 
@@ -103,4 +128,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-10-19 22:32:02
+-- Dump completed on 2020-10-19 22:43:46
